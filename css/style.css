@@ -1,0 +1,314 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  width: 100vw;
+  margin: 0;
+}
+
+header {
+  background-color: #fff;
+  position: relative;
+  margin-bottom: 10px;
+}
+header:after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  border-radius: 30%;
+  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.4);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center !important;
+  margin-top: 10vh;
+  flex-direction: column;
+}
+
+.menu {
+  margin-top: 40px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 440px;
+  justify-content: space-between;
+}
+
+.menu > a {
+  font-size: 30px;
+  text-decoration: none;
+  position: relative;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+}
+
+#pages:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+#pages:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+#title {
+  display: flex;
+  text-align: center;
+  font-size: 40px;
+}
+#sub-title {
+  margin-top: 20px;
+  margin-bottom: 3rem;
+}
+.content {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+}
+
+#glossary {
+  width: 75vw;
+  font-size: 20px;
+  margin-top: 10vh;
+  text-align: center;
+}
+
+dt {
+  font-size: 35px;
+  padding-bottom: 20px;
+}
+dd {
+  margin-bottom: 40px;
+  text-align: justify;
+}
+
+#back {
+  font-size: 20px;
+  text-decoration: none;
+  position: relative;
+  color: black;
+  font-weight: bold;
+  left: 10%;
+  top: -14%;
+}
+#back:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+#back:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.contact {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  margin-top: 10vh;
+}
+
+.contact > a > img {
+  display: flex;
+  width: 100px;
+  height: 30px;
+  justify-content: space-between;
+}
+/*Esse .contact é os icone da pagina index*/
+
+.content-contact {
+  margin-top: 10vh;
+  display: flex;
+  justify-content: center;
+}
+
+#contact {
+  align-items: center;
+  border: 0;
+  padding: 50px;
+  font-size: 20px;
+}
+
+#select {
+  text-align: center;
+  width: 200px;
+}
+#name,
+#email {
+  width: 300px;
+}
+
+#submit {
+  cursor: pointer;
+  width: 90px;
+  height: 40px;
+  border: none;
+}
+
+.shopping-list {
+  display: flex;
+  margin-top: 10vh;
+  flex-direction: column;
+  align-items: center;
+}
+
+#sub-title-shopping {
+  font-size: 20px;
+}
+
+.checkbox {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+}
+.checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 2px;
+  text-align: justify;
+}
+.checkbox:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+.checkbox input:checked ~ .checkmark {
+  background-color: #1c1c1c;
+}
+
+.checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+/*Para o body adicionamos uma fonte e padding, no .container definimos um display block, position relative, margin e padding para os espaçamentos, e um font-size. E por último para esconder o input temos opacidade, width e height com valor 0.*/
+
+.quiz-list {
+  margin-top: 5vh;
+}
+.question {
+  font-size: 1em;
+}
+li {
+  border: 2px solid #e9ecef;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  padding: 15px;
+}
+
+#links-blog {
+  font-size: 20px;
+  text-decoration: none;
+  position: relative;
+  color: black;
+  font-weight: bold;
+  left: 10%;
+  top: -14%;
+  margin-left: 10px;
+}
+#links-blog:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+#links-blog:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.image-blog-post {
+  min-width: 200px;
+  max-width: 400px;
+}
+
+.content-post-blog {
+  margin-top: 7vh;
+  text-align: center;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.content-post-blog > p {
+  text-align: justify;
+}
+.author-info > p {
+  text-align: justify;
+}
+.author-info {
+  margin-top: 7vh;
+  text-align: center;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 50px;
+}
+.author-info > img {
+  width: 200px;
+}

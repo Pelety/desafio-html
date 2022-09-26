@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <h1 id="title">Formulário de Contato</h1>
+    </div>
+  </header>
+  <a id="back" href="index.html">INÍCIO</a>
+
+  <div class="content-contact">
+    <form action="">
+      <fieldset id="contact">
+        <legend> Entre em Contato</legend>
+        <!--Aqui termina o legend-->
+        <label for="select">Assunto</label>
+        <br>
+        <br>
+        <select name="select" id="select">
+          <option value="valor1" selected>Suporte</option>
+          <option value="valor2">Sugestão</option>
+          <option value="valor3">Reclamação</option>
+        </select>
+        <!--Termina aqui a selec-->
+        <br>
+        <br>
+        <label for="name">Nome Completo
+          <br>
+          <input type="text" name="name" id="name">
+        </label>
+        <br>
+        <br>
+        <!--Aqui termina o input de nome-->
+        <label for="name">E-mail
+          <br>
+          <input type="email" name="email" id="email">
+        </label>
+        <br>
+        <br>
+        <!--Aqui termina o input de email-->
+        <label for="name">Deixe sua Mensagem
+          <br>
+          <textarea name="message" id="message" cols="30" rows="10"></textarea>
+        </label>
+        <br>
+        <br>
+        <input type="checkbox" name="checkbox" id="checkbox">
+        <label for="checkbox">Aceito receber novidades por e-mail</label>
+        <br>
+        <br>
+        <!--termina aqui o checkbox-->
+        <input type="submit" value="Enviar" id="submit" pointer>
+        <br />
+      </fieldset>
+    </form>
+  </div>
+</body>
+
+</html>
